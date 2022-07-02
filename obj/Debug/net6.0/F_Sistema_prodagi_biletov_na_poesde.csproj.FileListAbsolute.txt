@@ -1,0 +1,15 @@
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\obj\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.csproj.AssemblyReference.cache
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\obj\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\obj\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.AssemblyInfoInputs.cache
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\obj\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.AssemblyInfo.cs
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\obj\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.csproj.CoreCompileInputs.cache
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\bin\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.exe
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\bin\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.deps.json
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\bin\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.runtimeconfig.json
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\bin\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.dll
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\bin\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.pdb
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\obj\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.dll
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\obj\Debug\net6.0\refint\F_Sistema_prodagi_biletov_na_poesde.dll
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\obj\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.pdb
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\obj\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.genruntimeconfig.cache
+C:\Users\musli\dev\c#\route256\F_Sistema_prodagi_biletov_na_poesde\obj\Debug\net6.0\ref\F_Sistema_prodagi_biletov_na_poesde.dll
