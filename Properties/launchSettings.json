@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "F_Sistema_prodagi_biletov_na_poesde": {
+      "commandName": "Project",
+      "commandLineArgs": "< input13.txt",
+      "workingDirectory": "C:\\Users\\musli\\dev\\c#\\route256\\F_Sistema_prodagi_biletov_na_poesde"
+    }
+  }
+}

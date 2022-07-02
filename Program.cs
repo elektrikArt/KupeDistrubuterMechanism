@@ -1,4 +1,8 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
+
+string[] _stdin = Console.In.ReadToEnd().Split('\n');
+int _i = -1;
 
 int kitsCount;
 string[] input;
@@ -11,14 +15,17 @@ int p;
 
 int i;
 
-kitsCount = int.Parse((Console.ReadLine() ?? "_"));
-sits = new bool[600_000];
+//kitsCount = int.Parse((Console.ReadLine() ?? "_"));
+kitsCount = int.Parse(ReadLine());
+sits = new bool[200_000];
 
 for (int _ = 0; _ < kitsCount; _++)
 {
-    Console.ReadLine();
+    //Console.ReadLine();
+    ReadLine();
 
-    input = (Console.ReadLine() ?? "_").Split(' ');
+    //input = (Console.ReadLine() ?? "_").Split(' ');
+    input = (ReadLine()).Split(' ');
     n = int.Parse(input[0]);
     m = int.Parse(input[1]);
     Array.Clear(sits);
@@ -31,7 +38,8 @@ for (int _ = 0; _ < kitsCount; _++)
                 Console.Write(".");
                 Console.SetOut(tmp);
                 */
-        input = (Console.ReadLine() ?? "_").Split(' ');
+        //input = (Console.ReadLine() ?? "_").Split(' ');
+        input = (ReadLine()).Split(' ');
         option = int.Parse(input[0]);
         p = 0;
         if (input.Length > 1)
@@ -100,4 +108,10 @@ for (int _ = 0; _ < kitsCount; _++)
             Console.WriteLine("FAIL");
         }
     }
+}
+
+string ReadLine()
+{
+    _i++;
+    return _stdin[_i];
 }
