@@ -1,12 +1,9 @@
 Get-ChildItem ./tests/ -Exclude "*.a","*.mine" | ForEach-Object {
-    $content = Get-Content $_
-
-    $right = Get-Content ("./tests/" + $_.BaseName + ".a")
-    $result = $content | .\bin\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.exe
-
-    $result | Tee-Object ("./tests/" + $_.BaseName + ".mine") | Out-Null
-
     $_.BaseName + ":"
+
+    Get-Content $_ | .\bin\Debug\net6.0\F_Sistema_prodagi_biletov_na_poesde.exe`
+        | Tee-Object ("./tests/" + $_.BaseName + ".mine") > $null
+
     #"content:"
     #$content
     #"right:"
@@ -15,9 +12,10 @@ Get-ChildItem ./tests/ -Exclude "*.a","*.mine" | ForEach-Object {
     #$result
 
 
-    $verdict = Compare-Object -ReferenceObject $right -DifferenceObject $result
-    if ($verdict -ne $null) {
-        $verdict
-        break;
-    }
+    #$verdict = Compare-Object -ReferenceObject $right -DifferenceObject $result
+    #if ($verdict -ne $null) {
+    #    $verdict
+    #    break;
+    #}
+    #$verdict
 }
