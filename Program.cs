@@ -9,6 +9,7 @@ string[] input;
 int n;
 int m;
 bool[] sits;
+int nextFreeKupe = 0;  // zero-based
 
 int option;
 int p;
@@ -18,6 +19,7 @@ int i;
 //kitsCount = int.Parse((Console.ReadLine() ?? "_"));
 kitsCount = int.Parse(ReadLine());
 sits = new bool[200_000];
+i = 0;
 
 for (int _ = 0; _ < kitsCount; _++)
 {
@@ -29,6 +31,7 @@ for (int _ = 0; _ < kitsCount; _++)
     n = int.Parse(input[0]);
     m = int.Parse(input[1]);
     Array.Clear(sits);
+    nextFreeKupe = 0;
 
     for (int __ = 0; __ < m; __++)
     {
@@ -72,6 +75,9 @@ for (int _ = 0; _ < kitsCount; _++)
         {
             sits[p] = true;
             Console.WriteLine("SUCCESS");
+
+            if ((nextFreeKupe == p || nextFreeKupe + 1 == p) && nextFreeKupe != -1)
+                FindFreeKupe(p);
         }
         else
         {
@@ -84,6 +90,15 @@ for (int _ = 0; _ < kitsCount; _++)
         {
             sits[p] = false;
             Console.WriteLine("SUCCESS");
+
+            //FindFreeKupe(p);
+            if ((nextFreeKupe == -1 || p < nextFreeKupe) && IsFreeKupe(p))
+            {
+                if (p % 2 == 0)
+                    nextFreeKupe = p;
+                else
+                    nextFreeKupe = p - 1;
+            }
         }
         else
         {
@@ -92,21 +107,40 @@ for (int _ = 0; _ < kitsCount; _++)
     }
     void TakeKupe()
     {
-        for (i = 0; i < 2 * n; i += 2)
+        if (nextFreeKupe != -1)
+        {
+            sits[nextFreeKupe] = true;
+            sits[nextFreeKupe + 1] = true;
+            Console.WriteLine($"SUCCESS {nextFreeKupe+1}-{nextFreeKupe+2}");
+            FindFreeKupe(nextFreeKupe);
+        }
+        else
+        {
+            Console.WriteLine("FAIL");
+        }
+    }
+    void FindFreeKupe(int p)
+    {
+        for (i = p - p % 2; i < 2 * n; i += 2)
         {
             if (sits[i] == false && sits[i + 1] == false)
                 break;
         }
         if (i < 2 * n)
         {
-            sits[i] = true;
-            sits[i + 1] = true;
-            Console.WriteLine($"SUCCESS {i+1}-{i+2}");
+            nextFreeKupe = i;
         }
         else
-        {
-            Console.WriteLine("FAIL");
-        }
+            nextFreeKupe = -1;
+    }
+    bool IsFreeKupe(int p)
+    {
+        if (p < 0 || p >= sits.Length)
+            return false;
+        if (p % 2 == 0)
+            return sits[p] == false && sits[p + 1] == false;
+        else
+            return sits[p - 1] == false && sits[p] == false;
     }
 }
 
